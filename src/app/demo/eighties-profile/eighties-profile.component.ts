@@ -25,6 +25,7 @@ export class EightiesProfileComponent extends CognitiveServicesComponent impleme
     faceId2: string;
     verificationStatus: string;
     resultStatus: string;
+    isMatchResultEmpty: boolean = true;
 
     public constructor(private titleService: Title,
         private faceDataService: FaceDataService) {
@@ -37,6 +38,7 @@ export class EightiesProfileComponent extends CognitiveServicesComponent impleme
     }
 
     ngOnInit() {
+        this.isLoading = false;
         this.imagePairs = environment.faceImagePairs;
         console.log(this.viewerComponent1);
         this.selectImagePair(this.imagePairs[0]);
