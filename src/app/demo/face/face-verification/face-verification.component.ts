@@ -39,12 +39,17 @@ export class FaceVerificationComponent extends CognitiveServicesComponent implem
     ngOnInit() {
         this.imagePairs = environment.faceImagePairs;
         this.selectImagePair(this.imagePairs[0]);
-
+        setTimeout(() => {
+            this.viewerComponent1.internetImageUrl = 'https://ksassets.timeincuk.net/wp/uploads/sites/55/2018/02/rexfeatures_1267420l-920x584.jpg';
+            this.viewerComponent1.onInternetUrlSelected();
+        }, 5000);
         this.viewerComponent1.imageSelected.subscribe((e: ImageSelectedEvent) => {
+            console.log('here');
             this.selectedImagePair = { image1: e.imagePath, image2: this.selectedImagePair.image2 };
         });
         this.viewerComponent1.faceDetected.subscribe((faces: Array<IFace>) => {
             if (this.validateFace(faces)) {
+
                 this.faceId1 = faces[0].faceId;
                 this.verifyFaces();
             }
@@ -55,6 +60,7 @@ export class FaceVerificationComponent extends CognitiveServicesComponent implem
         });
         this.viewerComponent2.faceDetected.subscribe((faces: Array<IFace>) => {
             if (this.validateFace(faces)) {
+                console.log(faces);
                 this.faceId2 = faces[0].faceId;
                 this.verifyFaces();
             }

@@ -11,6 +11,9 @@
         <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
         <div class="row ">
             <app-face-viewer #fvc1 (faceDetecting)="onFaceDetecting()" (faceError)="onError($event)"></app-face-viewer>
+            <div style="display:none">
+                <app-face-viewer #fvc2 (faceDetecting)="onFaceDetecting()" (faceError)="onError($event)"></app-face-viewer>
+            </div>
             <!-- <div class="col-xs-12 col-sm-6">
                     <label > ? </label>
             </div> -->

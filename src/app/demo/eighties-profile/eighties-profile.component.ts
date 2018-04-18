@@ -14,7 +14,7 @@ import { CognitiveServicesComponent } from '../cognitive-services.component';
 })
 export class EightiesProfileComponent extends CognitiveServicesComponent implements OnInit {
     @ViewChild('fvc1') viewerComponent1: FaceViewerComponent;
-    // @ViewChild('fvc2') viewerComponent2: FaceViewerComponent;
+    @ViewChild('fvc2') viewerComponent2: FaceViewerComponent;
 
     apiTitle = 'Facial Recognition API';
     apiDescription = 'Detect human faces and compare similar ones, organize people into groups according to visual similarity, and identify previously tagged people in images.';
@@ -26,7 +26,7 @@ export class EightiesProfileComponent extends CognitiveServicesComponent impleme
     faceId2: string;
     verificationStatus: string;
     resultStatus: string;
-    isMatchResultEmpty: boolean = true;
+    isMatchResultEmpty = true;
 
     public constructor(private titleService: Title,
         private faceDataService: FaceDataService) {
@@ -51,36 +51,44 @@ export class EightiesProfileComponent extends CognitiveServicesComponent impleme
             if (this.validateFace(faces)) {
                 this.faceId1 = faces[0].faceId;
                 this.verifyFaces();
+                // this.verifyFaces();
             }
         });
 
-<<<<<<< HEAD
         this.viewerComponent2.imageSelected.subscribe((e: ImageSelectedEvent) => {
             this.selectedImagePair = { image1: this.selectedImagePair.image1, image2: e.imagePath };
         });
         this.viewerComponent2.faceDetected.subscribe((faces: Array<IFace>) => {
             if (this.validateFace(faces)) {
+                console.log(faces[0]);
+                let perIndex = 0;
+                this.personalities.forEach((value: Personality, index:number) => {
+                    if (value.url === this.viewerComponent2.internetImageUrl) {
+                        value.guid = faces[0].faceId;
+                        perIndex = index++;
+                    }
+                });
+                this.checkAllFaces(perIndex);
                 this.faceId2 = faces[0].faceId;
-                this.verifyFaces();
+                // this.verifyFaces();
             }
         });
-
-        
     }
 
-    selectImageForCompare(data: Personality) {
-        //no op
-=======
-        // this.viewerComponent2.imageSelected.subscribe((e: ImageSelectedEvent) => {
-        //     this.selectedImagePair = { image1: this.selectedImagePair.image1, image2: e.imagePath };
-        // });
-        // this.viewerComponent2.faceDetected.subscribe((faces: Array<IFace>) => {
-        //     if (this.validateFace(faces)) {
-        //         this.faceId2 = faces[0].faceId;
-        //         this.verifyFaces();
-        //     }
-        // });
->>>>>>> 5b39b77b3c2f8366e43bb3225199678979ab2231
+    checkAllFaces(index: number) {
+        this.personalities.forEach((value: Personality, i: number) => {
+            if (index === i) {
+                this.viewerComponent2.internetImageUrl = value.url;
+                this.viewerComponent2.onInternetUrlSelected();
+            }
+        });
+    }
+
+    checkAllFaces2() {
+        this.personalities.forEach((value: Personality, i: number) => {
+           this.faceId2 = value.guid;
+           this.verifyFaces();
+        });
     }
 
     selectImagePair(imagePair: any) {
@@ -102,8 +110,14 @@ export class EightiesProfileComponent extends CognitiveServicesComponent impleme
     }
 
     verifyFaces() {
+        let highest = 0;
+    
         if (this.faceId1 && this.faceId2) {
+            console.log('faces');
+            console.log(this.faceId1);
+            console.log(this.faceId2);
             this.faceDataService.verify(this.faceId1, this.faceId2).then(result => {
+                
                 if (result.isIdentical) {
                     this.verificationStatus = 'The two faces belong to the same person.';
                 } else {

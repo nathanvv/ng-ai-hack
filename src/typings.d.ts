@@ -8,4 +8,5 @@ declare interface Personality {
   name: string;
   url: string;
   context: string;
+  guid?: string;
 }
