@@ -17,6 +17,7 @@ import { ComputerVisionAnalyzeImageComponent } from './computer-vision/computer-
 import { EightiesProfileComponent } from './eighties-profile/eighties-profile.component';
 import { TextAnalysisComponent } from './text/text-analysis/text-analysis.component';
 import { HomeComponent } from './home/home.component';
+import { PersonalityComponent } from './personality/personality.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, CognitiveServicesModule, DemoRoutingModule],
@@ -30,7 +31,8 @@ import { HomeComponent } from './home/home.component';
     ComputerVisionAnalyzeImageComponent,
     TextAnalysisComponent,
     HomeComponent,
-    EightiesProfileComponent
+    EightiesProfileComponent,
+    PersonalityComponent
   ],
   providers: [Title]
 })

@@ -63,6 +63,12 @@ export class EightiesProfileComponent extends CognitiveServicesComponent impleme
                 this.verifyFaces();
             }
         });
+
+        
+    }
+
+    selectImageForCompare(data: Personality) {
+        //no op
     }
 
     selectImagePair(imagePair: any) {

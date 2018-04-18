@@ -42,11 +42,14 @@
             </div>
         </div>
         <div class="row result-row">
-            <div *ngFor="let imagePair of imagePairs" class="col-xs-4">
-                <div class="row" (click)="selectImagePair(imagePair)" class="image-pair" [ngClass]="imagePair.image1 === selectedImagePair.image1 && imagePair.image2 === selectedImagePair.image2 ? 'selected' : ''">
+            <div *ngFor="let personality of personalities" class="col-xs-4">
+                <!-- <div class="row" (click)="selectImagePair(imagePair)" class="image-pair" [ngClass]="imagePair.image1 === selectedImagePair.image1 && imagePair.image2 === selectedImagePair.image2 ? 'selected' : ''">
                     <img [src]="imagePair.image1" class="col-xs-6" />
                     <img [src]="imagePair.image2" class="col-xs-6" />
-                </div>
+                </div> -->
+                
+                <app-personality [personality]="personality" (clicked)="selectImageForCompare($event)"></app-personality>
+                
             </div>
         </div>
         <br>
