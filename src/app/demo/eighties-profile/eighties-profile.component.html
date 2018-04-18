@@ -3,12 +3,10 @@
 <div class="component-container">
     <div class="container">
         <div class="row">
-            <h2>Face Verification</h2>
+            <h2>Face Match 80's Personality</h2>
         </div>
-        <div class="row api-description">
-            Check the likelihood that two faces belong to the same person. The API will return
-            a confidence score about how likely it is that the two faces belong to
-            one person.
+        <div class="row api-description" style="padding : 8px 16px">
+               Attempts to closely match your face to one in our famous 80's personality list.
         </div>
         <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
         <div class="row ">
@@ -16,7 +14,7 @@
             <!-- <div class="col-xs-12 col-sm-6">
                     <label > ? </label>
             </div> -->
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-sm-6" style="max-width: 550px; padding: 6px 12px 8px 8px;">
                 <div class="demo-codes detection-demo-codes">
                     <h1 class="text-info display-middle" *ngIf="isMatchResultEmpty">
                         ?
@@ -49,7 +47,7 @@
                 </div>
             </div>
         </div> -->
-        <br>
+        <!-- <br>
         <div class="row">
             <h2>Want to build this?</h2>
         </div>
@@ -58,6 +56,6 @@
                 <a class="button button-secondary button-primary" href="https://docs.microsoft.com/en-us/azure/cognitive-services/face/quickstarts/javascript#Identify">
                     Documentation</a>
             </h2>
-        </div>
+        </div> -->
     </div>
 </div>
