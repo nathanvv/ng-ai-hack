@@ -1,0 +1,8 @@
+.personality {
+    width: 100%
+}
+
+.personality .image {
+    max-width: 100%;
+    max-height: 180px;
+}
