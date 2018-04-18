@@ -20,6 +20,7 @@ export class EightiesProfileComponent extends CognitiveServicesComponent impleme
     apiDescription = 'Detect human faces and compare similar ones, organize people into groups according to visual similarity, and identify previously tagged people in images.';
 
     imagePairs: Array<ImagePair>;
+    personalities: Array<Personality>;
     selectedImagePair: ImagePair;
     faceId1: string;
     faceId2: string;
@@ -38,6 +39,7 @@ export class EightiesProfileComponent extends CognitiveServicesComponent impleme
 
     ngOnInit() {
         this.imagePairs = environment.faceImagePairs;
+        this.personalities = environment.eightiesBabies;
         console.log(this.viewerComponent1);
         this.selectImagePair(this.imagePairs[0]);
         this.viewerComponent1.imageSelected.subscribe((e: ImageSelectedEvent) => {

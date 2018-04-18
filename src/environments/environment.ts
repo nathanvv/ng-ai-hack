@@ -30,6 +30,63 @@ export const environment = {
       image2: 'https://ia.media-imdb.com/images/M/MV5BMTI4ODEzNzkzM15BMl5BanBnXkFtZTYwMjczMTQ2._V1_.jpg'
     }
   ],
+  eightiesBabies: [
+    {
+      name: "Madonna",
+      url: "https://i.pinimg.com/736x/b2/fa/2f/b2fa2f6ddace77eb2a014e103f0ca15c--madonna-albums-madonna-s.jpg",
+      context: "Singer"
+    },
+    {
+      name: "Mr. T",
+      url: "http://www.manic-expression.com/wp-content/uploads/2014/08/mr-t-thumb-400xauto-10209.jpg",
+      context: "Actor - A Team"
+    },
+    {
+      name: "Max Headroom",
+      url: "http://www.manic-expression.com/wp-content/uploads/2014/08/maxheadroom3.jpg",
+      context: "TV Personality"
+    },
+    {
+      name: "Richard Simmons",
+      url: "http://2.bp.blogspot.com/_iNFMxWIeDVI/TUu-76sCIkI/AAAAAAAAAOA/8Hs05nD2otc/s1600/RichardSimmons.jpg",
+      context: "Fitness Personality"
+    },
+    {
+      name: "Hulk Hogan",
+      url: "http://www.manic-expression.com/wp-content/uploads/2014/08/Hulk-Hogan.jpg",
+      context: "Wrestling Personality"
+    },
+    {
+      name: "Boy George",
+      url: "http://3.bp.blogspot.com/_u58i4qSO0Zk/TNLezJWFE_I/AAAAAAAADIQ/spHnx6YimvA/s1600/Boy-George_l.jpeg",
+      context: "Singer"
+    },
+    {
+      name: "Michael J. Fox",
+      url: "https://img.buzzfeed.com/buzzfeed-static/static/2015-07/17/18/campaign_images/webdr11/whats-your-80s-movie-persona-based-on-these-three-2-11968-1437171121-5_dblbig.jpg",
+      context: "Actor - Back to the Future"
+    },
+    {
+      name: "Peewee Herman",
+      url: "http://static.tvtropes.org/pmwiki/pub/images/pee-wee-herman_1978.jpg",
+      context: "TV Personality"
+    },
+    {
+      name: "Will Smith",
+      url: "https://metrouk2.files.wordpress.com/2015/01/fresh-prince.png",
+      context: "Actor/Singer - Fresh Prince"
+    },
+    {
+      name: "Matthew Broderick",
+      url: "https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1492112271/articles/2016/06/11/happy-30th-ferris-bueller-30-things-you-didn-t-know-about-ferris-bueller-s-day-off/160610-zimmerman-bueller-tease_c2of7p",
+      context: "Actor - Ferris Bueller's Day Off"
+    },
+    {
+      name: "Molly Ringwald",
+      url: "https://www.independent.ie/incoming/article31567501.ece/ALTERNATES/h342/molly-ringwald-1.jpg",
+      context: "Actress - Breakfast Club"
+    }
+  ],
   emotionImageUrls: [
     'https://azurecomcdn.azureedge.net/cvt-c279d652f08698664d10c9ce4fc15527a238b442f47fc23d42515b257cf70957/images/shared/cognitive-services-demos/recognize-emotion/emotion-1.jpg',
     'https://azurecomcdn.azureedge.net/cvt-c279d652f08698664d10c9ce4fc15527a238b442f47fc23d42515b257cf70957/images/shared/cognitive-services-demos/recognize-emotion/emotion-2.jpg',
