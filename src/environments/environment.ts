@@ -1,10 +1,10 @@
 export const environment = {
   production: false,
-  apiServer: 'https://westcentralus.api.cognitive.microsoft.com',
+  apiServer: 'https://southcentralus.api.cognitive.microsoft.com',
   apiKeys: {
     computerVision: '<insert your computer vision API key here>',
-    face: '<insert your face API key here>',
-    textAnalytics: '<insert your text analytics API key here>'
+    face: '3e57664bb9054b33ab4c452f758768bd',
+    textAnalytics: '6ef51acf0c8441828ac54f95c90de700'
   },
   faceImageUrls: [
     'https://azurecomcdn.azureedge.net/cvt-f5ab578f41fc8f93ac9c7f1cd40941f1dcde8887a48baba731a3bebf350cfb50/images/shared/cognitive-services-demos/face-detection/detection-1.jpg',

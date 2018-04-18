@@ -14,6 +14,7 @@ import { FaceDetectionComponent } from './face/face-detection/face-detection.com
 import { FaceVerificationComponent } from './face/face-verification/face-verification.component';
 import { ComputerVisionReadTextComponent } from './computer-vision/computer-vision-read-text/computer-vision-read-text.component';
 import { ComputerVisionAnalyzeImageComponent } from './computer-vision/computer-vision-analyze-image/computer-vision-analyze-image.component';
+import { EightiesProfileComponent } from './eighties-profile/eighties-profile.component';
 import { TextAnalysisComponent } from './text/text-analysis/text-analysis.component';
 import { HomeComponent } from './home/home.component';
 
@@ -28,7 +29,8 @@ import { HomeComponent } from './home/home.component';
     ComputerVisionReadTextComponent,
     ComputerVisionAnalyzeImageComponent,
     TextAnalysisComponent,
-    HomeComponent
+    HomeComponent,
+    EightiesProfileComponent
   ],
   providers: [Title]
 })
