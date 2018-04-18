@@ -11,7 +11,7 @@
             one person.
         </div>
         <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
-        <div class="column ">
+        <div class="row ">
             <app-face-viewer #fvc1 (faceDetecting)="onFaceDetecting()" (faceError)="onError($event)"></app-face-viewer>
             <!-- <div class="col-xs-12 col-sm-6">
                     <label > ? </label>
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="row result-row">
+        <!-- <div class="row result-row">
             <div class="col-xs-12">
                 <div class="verification-box">
                     <span>Verification Result:</span>
@@ -40,15 +40,15 @@
                     <span>{{ resultStatus }}</span>
                 </div>
             </div>
-        </div>
-        <div class="row result-row">
+        </div> -->
+        <!-- <div class="row result-row">
             <div *ngFor="let imagePair of imagePairs" class="col-xs-4">
                 <div class="row" (click)="selectImagePair(imagePair)" class="image-pair" [ngClass]="imagePair.image1 === selectedImagePair.image1 && imagePair.image2 === selectedImagePair.image2 ? 'selected' : ''">
                     <img [src]="imagePair.image1" class="col-xs-6" />
                     <img [src]="imagePair.image2" class="col-xs-6" />
                 </div>
             </div>
-        </div>
+        </div> -->
         <br>
         <div class="row">
             <h2>Want to build this?</h2>
