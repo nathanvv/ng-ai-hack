@@ -14,7 +14,7 @@ import { CognitiveServicesComponent } from '../cognitive-services.component';
 })
 export class EightiesProfileComponent extends CognitiveServicesComponent implements OnInit {
     @ViewChild('fvc1') viewerComponent1: FaceViewerComponent;
-    @ViewChild('fvc2') viewerComponent2: FaceViewerComponent;
+    // @ViewChild('fvc2') viewerComponent2: FaceViewerComponent;
 
     apiTitle = 'Facial Recognition API';
     apiDescription = 'Detect human faces and compare similar ones, organize people into groups according to visual similarity, and identify previously tagged people in images.';
@@ -54,6 +54,7 @@ export class EightiesProfileComponent extends CognitiveServicesComponent impleme
             }
         });
 
+<<<<<<< HEAD
         this.viewerComponent2.imageSelected.subscribe((e: ImageSelectedEvent) => {
             this.selectedImagePair = { image1: this.selectedImagePair.image1, image2: e.imagePath };
         });
@@ -69,12 +70,23 @@ export class EightiesProfileComponent extends CognitiveServicesComponent impleme
 
     selectImageForCompare(data: Personality) {
         //no op
+=======
+        // this.viewerComponent2.imageSelected.subscribe((e: ImageSelectedEvent) => {
+        //     this.selectedImagePair = { image1: this.selectedImagePair.image1, image2: e.imagePath };
+        // });
+        // this.viewerComponent2.faceDetected.subscribe((faces: Array<IFace>) => {
+        //     if (this.validateFace(faces)) {
+        //         this.faceId2 = faces[0].faceId;
+        //         this.verifyFaces();
+        //     }
+        // });
+>>>>>>> 5b39b77b3c2f8366e43bb3225199678979ab2231
     }
 
     selectImagePair(imagePair: any) {
         this.selectedImagePair = imagePair;
         this.viewerComponent1.selectStockImage(imagePair.image1);
-        this.viewerComponent2.selectStockImage(imagePair.image2);
+        // this.viewerComponent2.selectStockImage(imagePair.image2);
     }
 
     validateFace(faces: Array<IFace>): boolean {
